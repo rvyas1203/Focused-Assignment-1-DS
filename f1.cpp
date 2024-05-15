@@ -28,11 +28,11 @@ void fillFlightInfo(struct FlightInfo* flight, const char* dest, const char* dat
 
 	//Allocate memory for the destination string and copy the destination into it.
 	flight->destination = (char*)malloc(strlen(dest) + 1); // +1 for null terminator
-	strcpy_s(flight->destination, dest);
+	strcpy(flight->destination, dest);
 
 	//Allocate Memory for the date string and copy the data into it.
 	flight->date = (char*)malloc(strlen(date) + 1); // +1 for null terminator
-	strcpy_s(flight->date, date);
+	strcpy(flight->date, date);
 }
 
 // Function to print flight information 
@@ -71,7 +71,7 @@ int main() {
 	//Print all Flight information
 
 	printf("\nFligth Informtation:\n");
-	printfFligthInfo(flights);
+	printFligthInfo(flights);
 
 	// Free dynamically allocated memomry 
 	for (int i = 0; i < 10; i++) {
