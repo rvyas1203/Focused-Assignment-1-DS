@@ -68,5 +68,10 @@ int main() {
 		fillFlightInfo(&flights[i], dest, date);
 	}
 
+	//Print all Flight information
+
+	printf("\nFligth Informtation:\n");
+	printfFligthInfo(flights);
+
 }
 
