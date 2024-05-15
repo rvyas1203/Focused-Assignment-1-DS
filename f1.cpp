@@ -45,4 +45,8 @@ void printFlightInfo(struct FlightInfo* flights) {
 	}
 }
 
+int main() {
+	// Declare array of FlightInfo structs to hold information for 10 flights
+	struct FlightInfo flights[10];
+}
 
