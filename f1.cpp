@@ -34,3 +34,15 @@ void fillFlightInfo(struct FlightInfo* flight, const char* dest, const char* dat
 	flight->date = (char*)malloc(strlen(date) + 1); // +1 for null terminator
 	strcpy_s(flight->date, date);
 }
+
+// Function to print flight information 
+void printFlightInfo(struct FlightInfo* flights) {
+	// Print headers for the flight information
+	printf("%-35s%-35s\n", "Destination", "Date");
+	// Loop through each flight and print its destination and date
+	for (int i = 0; i < 10; i++) {
+		printf("%-35s%-35s\n", flights[i].destination, flights[i].date);
+	}
+}
+
+
