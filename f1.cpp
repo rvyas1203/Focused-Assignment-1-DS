@@ -48,5 +48,25 @@ void printFlightInfo(struct FlightInfo* flights) {
 int main() {
 	// Declare array of FlightInfo structs to hold information for 10 flights
 	struct FlightInfo flights[10];
+
+	// Prompt user for flight information and fill FlightInfo structs
+	for (int i = 0; i < 10; i++) {
+		char dest[30], date[30];  // Temporary buffers to hold user input
+		printf("Flight %d:\n", i + 1);
+
+		// Get destination from user
+		printf("Enter destination: ");
+		fgets(dest, sizeof(dest), stdin);
+		dest[strcspn(dest, "\n")] = '\0'; // Remove newline character
+
+		// Get date from user
+		printf("Enter date: ");
+		fgets(date, sizeof(date), stdin);
+		date[strcspn(date, "\n")] = '\0'; // Remove newline character
+
+		// Fill the current FlightInfo struct with the user input
+		fillFlightInfo(&flights[i], dest, date);
+	}
+
 }
 
