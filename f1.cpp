@@ -11,7 +11,7 @@
 *   the user for input, stores the information, prints it, and then frees dynamically allocated memory
 *   to avoid memory leaks.
 */
-
+#pragma warning(disable: 4996) 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -71,7 +71,7 @@ int main() {
 	//Print all Flight information
 
 	printf("\nFligth Informtation:\n");
-	printFligthInfo(flights);
+	printFlightInfo(flights);
 
 	// Free dynamically allocated memomry 
 	for (int i = 0; i < 10; i++) {
