@@ -73,5 +73,13 @@ int main() {
 	printf("\nFligth Informtation:\n");
 	printfFligthInfo(flights);
 
+	// Free dynamically allocated memomry 
+	for (int i = 0; i < 10; i++) {
+		free(flights[i].destination); // Free memory allocated for the destination
+		free(flights[i].date);        // Free memory allocated for the date
+	}
+
+	return 0;
+
 }
 
