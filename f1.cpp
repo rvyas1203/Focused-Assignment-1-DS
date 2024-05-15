@@ -23,3 +23,14 @@ struct FlightInfo {
 	char *date; // Pointer to Dynamically allocated the string for date
 };
 
+// Fuction to allocate memory and fill FlightInfo struct with destination and date 
+void fillFlightInfo(struct FlightInfo* flight, const char* dest, const char* date) {
+
+	//Allocate memory for the destination string and copy the destination into it.
+	flight->destination = (char*)malloc(strlen(dest) + 1); // +1 for null terminator
+	strcpy_s(flight->destination, dest);
+
+	//Allocate Memory for the date string and copy the data into it.
+	flight->date = (char*)malloc(strlen(date) + 1); // +1 for null terminator
+	strcpy_s(flight->date, date);
+}
